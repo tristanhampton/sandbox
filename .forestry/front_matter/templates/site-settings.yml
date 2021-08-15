@@ -1,0 +1,32 @@
+---
+label: Site Settings
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Site Title
+  description: The name of the site.
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logo
+  description: The logo for the site. Appears in the header.
+- name: site_credit
+  type: text
+  config:
+    required: false
+  label: Site Credit
+  description: Appears in the footer.
+  hidden: true
+  default: Tristan Hampton
+- name: attribution
+  type: text
+  config:
+    required: false
+  label: Attribution
+  description: If an attribution to a third party is required, enter it here
+pages:
+- src/data/site.json

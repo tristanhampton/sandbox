@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'head.liquid'%}
+	{% include 'header.njk' %}
+	<body>
+		<main>
+			{{ content | safe }}
+		</main>
+		
+		{% include 'footer.njk' %}
+	</body>
+</body>
+</html>

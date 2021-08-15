@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="feed-template">
+	<section class="feed__content">
+		<div class="container">
+		    {{ content }}
+		</div>
+	</section>
+
+	<section class="feed__post-feed">
+		<div class="container">
+			{%- for post in collections[feed_by_tag] -%}
+				{%- if post.data.published == true -%}
+					<article class="feed__post">
+						<h3><a href="{{ post.url }}">{{post.data.title}}</a></h3>
+						<p>{{ content | strip_html | truncate: 80 }}</p>
+					</article>
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
+	</section>
+</div>

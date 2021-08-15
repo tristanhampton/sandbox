@@ -1,0 +1,51 @@
+---
+label: Feed Page
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: feed
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: permalink
+  label: Permalink
+  description: ex. /about/
+- type: field_group
+  name: eleventyNavigation
+  label: Navigation
+  fields:
+  - type: text
+    name: key
+    label: Menu Title
+    description: The title that appears in the menu
+  - name: parent
+    type: text
+    config:
+      required: false
+    label: Parent
+    description: If the page should appear as a descendant of another, enter the parent
+      page here.
+  - name: order
+    type: number
+    label: Order
+    description: Determines the order links appear in the navigation. Lower numbers
+      appear first.
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+- name: feed_by_tag
+  type: text
+  config:
+    required: false
+  label: Add Feed by Tag
+  description: Enter the name of a tag. These posts will be displayed on the page.
+  default: articles
+pages:
+- src/content/pages/article-feed.md

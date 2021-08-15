@@ -1,0 +1,145 @@
+.site-header {
+	padding: 4rem 0;
+
+	> .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.header__site-logo {
+		width: 100%;
+		max-width: 8rem;
+	}
+
+//--- Universal Nav Styles
+	.header__main-nav {
+
+		ul {
+
+			li {
+
+				a {
+
+				}
+			}
+		}
+	}
+
+//--- Desktop
+	@include min-bp(menu-break) {
+
+		.header__menu-toggle {
+			display: none;
+		}
+
+		.header__main-nav {
+
+			//--- Top Level
+			ul.main-nav__top-level {
+				display: flex;
+
+				> li {
+
+					> a {
+
+					}
+
+				}
+			}
+
+			//--- Second Level
+			ul.main-nav__second-level {
+				display: none;
+
+				> li {
+
+					> a {
+
+					}
+				}
+			}
+
+			//--- Third Level
+			ul.main-nav__third-level {
+				display: none;
+
+				> li {
+
+					> a {
+
+					}
+				}
+			}
+
+			@include bp(menu-break) {
+				display: none;
+			}
+		}
+	}
+
+//--- Mobile
+	@include bp(menu-break) {
+		position: relative;
+
+		.header__menu-toggle {
+			display: block;
+		}
+
+		.header__main-nav {
+			display: block;
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 0;
+			height: 100vh;
+			background-color: $primary;
+			transition: .3s ease;
+
+			&.open {
+				width: 40%;
+			}
+
+			//--- Top Level
+			ul.main-nav__top-level {
+				display: flex;
+
+				> li {
+
+					> a {
+
+					}
+
+				}
+			}
+
+			//--- Second Level
+			ul.main-nav__second-level {
+				display: none;
+
+				> li {
+
+					> a {
+
+					}
+				}
+			}
+
+			//--- Third Level
+			ul.main-nav__third-level {
+				display: none;
+
+				> li {
+
+					> a {
+
+					}
+				}
+			}
+
+			@include bp(menu-break) {
+				display: none;
+			}
+		}
+	}
+}

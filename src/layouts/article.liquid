@@ -1,0 +1,25 @@
+---
+layout: default
+permalink: "articles/{{ page.fileSlug }}/"
+---
+
+<article>
+	<header>
+		<div class="container">
+			<h2 class="article__title">{{ title }}</h2>
+			<p class="article__author">{{ author }}</p>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			{{ content | safe }}
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p class="article__date">{{ date_published }}</p>
+		</div>
+	</footer>
+</article>

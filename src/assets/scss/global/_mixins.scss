@@ -1,0 +1,27 @@
+/* Psuedo Elements
+ *----------------------------------*/
+ @mixin psuedo--before {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+ }
+
+ @mixin psuedo--after {
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+ }

@@ -1,0 +1,61 @@
+---
+label: Article
+hide_body: false
+fields:
+- name: featured_image
+  type: file
+  config:
+    maxSize: 64
+  label: Featured Image
+  description: Adds a featured image to the beginning of the post. This will also
+    appear in Feed pages.
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: The title of the post.
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+  description: The author of the post.
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: Tags associated with the post.
+- name: published
+  type: boolean
+  label: Published
+  description: Displays the post if turned on.
+  default: true
+- name: date_published
+  type: datetime
+  label: Date Published
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+  hidden: true
+- name: layout
+  type: select
+  default: article
+  config:
+    required: false
+    options:
+    - article
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+  description: The layout used by the post.
+  hidden: true
+pages:
+- src/content/articles/an-amazing-article.md

@@ -1,0 +1,57 @@
+---
+label: Basic Page
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: The title of the page.
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+  description: The url of the page, relative to the homepage.<br>ex. /about/
+- name: eleventyNavigation
+  type: field_group
+  config: {}
+  fields:
+  - name: key
+    type: text
+    config:
+      required: false
+    label: Menu Title
+    description: The text that appears in the menu.
+  - name: parent
+    type: text
+    config:
+      required: false
+    label: Parent
+    description: If this page should appear as a descendant of another, enter the
+      parent page here
+  - name: order
+    type: number
+    label: Order
+    description: 'Determines where in the navigation this link is placed. Lower numbers
+      come earlier. '
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  label: Navigation
+  description: Navigation settings
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: page
+pages:
+- src/content/pages/about.md
+- src/content/pages/explore.md
+- src/content/pages/history.md
