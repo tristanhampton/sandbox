@@ -10,18 +10,17 @@ permalink: "/"
 		<p>This is the site intro. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nesciunt praesentium illum, repudiandae, consectetur eos corporis odio nihil debitis alias eum obcaecati quae fuga. Praesentium corporis impedit recusandae soluta officia labore perspiciatis. Vel, facilis ut minus, eum reiciendis fugit eius iusto? Vitae mollitia distinctio reiciendis repudiandae ipsam maxime ipsum ducimus enim.</p>
 	</div>
 </section>
-
 <section>
 	<div class="container">
 		<h2>Articles</h2>
 		<p>Articles are displayed by looping through the posts tag collection.</p>
 		{%- for post in collections.article limit:4 -%}
-			{%- if post.data.published == true -%}
-				<article class="feed__post">
-					<h3><a href="{{ post.url }}">{{post.data.title}}</a></h3>
-					<p>{{ post.templateContent | strip_html | truncate: 80 }}</p>
-				</article>
-			{%- endif -%}
+		{%- if post.data.published == true -%}
+		<article class="feed__post">
+			<h3><a href="{{ post.url }}">{{post.data.title}}</a></h3>
+			<p>{{ post.templateContent | strip_html | truncate: 80 }}</p>
+		</article>
+		{%- endif -%}
 		{%- endfor -%}
 	</div>
 </section>
